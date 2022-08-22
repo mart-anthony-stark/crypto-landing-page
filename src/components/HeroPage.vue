@@ -3,7 +3,7 @@
     <div class="banner">
       <h1>Start and Build Your Crypto Portfolio Here</h1>
       <p>
-        Only at CryptoCap, you can build a good portfolio and learn best
+        Only at CryptoSmart, you can build a good portfolio and learn best
         practices about cryptocurrency.
       </p>
       <button-comp text="Get Started" />
