@@ -1,13 +1,46 @@
-<template></template>
+<template>
+  <header-nav />
+  <hero-page />
+</template>
 
 <script>
+import HeaderNav from "./components/HeaderNav.vue";
+import HeroPage from "./components/HeroPage.vue";
+
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    HeaderNav,
+    HeroPage,
   },
 };
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+@font-face {
+  font-family: RalewayBlack;
+  src: url("./fonts/static/Raleway-Black.ttf");
+}
+@font-face {
+  font-family: Raleway;
+  src: url("./fonts/Raleway-VariableFont_wght.ttf");
+}
+
+body {
+  font-family: Raleway;
+  color: aliceblue;
+}
 </style>
