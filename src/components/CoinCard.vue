@@ -36,12 +36,14 @@ const props = defineProps({
 
 <style scoped>
 .cont {
-  width: 250px;
-  height: 150px;
-  background: rgba(129, 129, 129, 0.1);
-  backdrop-filter: blur(1px);
-  border-radius: 25px;
-  border: 1px solid rgba(126, 126, 126, 0.4);
+  width: 297px;
+  height: 187px;
+
+  /* High Fidelity Color/Card Background */
+
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
   padding: 0.3rem 1rem;
   font-family: "Roboto", sans-serif;
 }
