@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav :class="{ active: isActive }">
     <h2 class="title">Crypto<span>Smart</span></h2>
 
     <div class="menu-links">
@@ -22,14 +22,21 @@
   </nav>
 </template>
 
-<script>
+
+<script setup>
 import ButtonComp from "./ButtonComp.vue";
-export default {
-  name: "HeaderNav",
-  components: {
-    ButtonComp,
-  },
-};
+import { onUnmounted, ref } from "vue";
+
+const isActive = ref(false);
+window.addEventListener("scroll", () => {
+  isActive.value = window.pageYOffset > 0;
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", () => {
+    isActive.value = window.pageYOffset > 0;
+  });
+});
 </script>
 
 <style scoped>
@@ -47,6 +54,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 999;
 }
 
 .title {
@@ -87,5 +95,9 @@ nav {
 .right {
   display: flex;
   gap: 10px;
+}
+
+nav.active {
+  background: linear-gradient(to top, rgba(17, 1, 30, 0.7), rgba(17, 1, 30, 1));
 }
 </style>
