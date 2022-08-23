@@ -1,12 +1,18 @@
 <template>
-  <section></section>
+  <section>
+    <feature-card />
+  </section>
 </template>
 
 <script>
 import { defineComponent } from "vue";
+import FeatureCard from "../FeatureCard.vue";
 
 export default defineComponent({
   setup() {},
+  components: {
+    FeatureCard,
+  },
 });
 </script>
 
