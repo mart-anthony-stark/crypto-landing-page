@@ -1,17 +1,20 @@
 <template>
   <header-nav />
   <hero-page />
+  <features-section />
 </template>
 
 <script>
 import HeaderNav from "./components/HeaderNav.vue";
 import HeroPage from "./components/HeroPage.vue";
+import FeaturesSection from "./components/sections/FeaturesSection.vue";
 
 export default {
   name: "App",
   components: {
     HeaderNav,
     HeroPage,
+    FeaturesSection,
   },
 };
 </script>
@@ -42,5 +45,9 @@ li {
 body {
   font-family: Raleway;
   color: aliceblue;
+}
+
+section {
+  min-height: 100vh;
 }
 </style>
