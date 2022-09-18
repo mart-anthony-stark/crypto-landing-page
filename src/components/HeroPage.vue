@@ -115,6 +115,7 @@ main {
 .coins-container {
   display: flex;
   justify-content: center;
-  gap: 5rem;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 </style>
