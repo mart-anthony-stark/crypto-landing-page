@@ -1,3 +1,19 @@
+<script setup>
+import ButtonComp from "./ButtonComp.vue";
+import { onUnmounted, ref } from "vue";
+
+const isActive = ref(false);
+window.addEventListener("scroll", () => {
+  isActive.value = window.pageYOffset > 0;
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", () => {
+    isActive.value = window.pageYOffset > 0;
+  });
+});
+</script>
+
 <template>
   <nav :class="{ active: isActive }">
     <h2 class="title">Crypto<span>Smart</span></h2>
@@ -21,23 +37,6 @@
     </div>
   </nav>
 </template>
-
-
-<script setup>
-import ButtonComp from "./ButtonComp.vue";
-import { onUnmounted, ref } from "vue";
-
-const isActive = ref(false);
-window.addEventListener("scroll", () => {
-  isActive.value = window.pageYOffset > 0;
-});
-
-onUnmounted(() => {
-  window.removeEventListener("scroll", () => {
-    isActive.value = window.pageYOffset > 0;
-  });
-});
-</script>
 
 <style scoped>
 @import "../css/variables.css";
