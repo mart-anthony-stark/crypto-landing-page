@@ -1,5 +1,8 @@
 <template>
-  <div class="card"></div>
+  <div class="card">
+    <img src="../assets/svg/features/manage.svg" alt="" />
+    
+  </div>
 </template>
 
 <style scoped>
