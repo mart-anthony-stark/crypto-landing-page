@@ -13,12 +13,17 @@ export default defineComponent({
       {
         name: "Protected Securely",
         desc: "All cash balances are covered by FDIC insurance, up to a maximum of $250,000.",
-        icon: "./img/features/manage.svg",
+        icon: "./img/features/security.svg",
       },
       {
         name: "Cryptocurrency Variety",
         desc: "Supports a variety of the most popular digital currencies and always uptodate.",
-        icon: "./img/features/manage.svg",
+        icon: "./img/features/crypto.svg",
+      },
+      {
+        name: "Learn Best Practice",
+        desc: "Easy to know how to cryptocurrency works and friendly to newbie.",
+        icon: "./img/features/learn.svg",
       },
     ];
 
@@ -32,6 +37,13 @@ export default defineComponent({
 
 <template>
   <section>
+    <div class="header">
+      <h1>CryptoCap Amazing Faetures</h1>
+      <p>
+        Explore sensational features to prepare your best investment in
+        cryptocurrency
+      </p>
+    </div>
     <div class="features">
       <feature-card
         v-for="feature in features"
@@ -56,5 +68,9 @@ section {
 .features {
   display: flex;
   justify-content: space-around;
+}
+.header {
+  text-align: center;
+  padding: 3rem 0;
 }
 </style>
