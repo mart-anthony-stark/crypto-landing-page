@@ -1,11 +1,24 @@
+<script>
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  props: {
+    name: String,
+    desc: String,
+    icon: String,
+  },
+  setup() {},
+});
+</script>
+
+
 <template>
   <div class="card">
-    <img class="icon" src="../assets/svg/features/manage.svg" alt="feature" />
+    <img class="icon" :src="icon" alt="feature" />
     <div class="content">
-      <h3>Manage Portfolio</h3>
+      <h3>{{ name }}</h3>
       <p>
-        Buy and sell popular digital currencies, keep track of them in the one
-        place.
+        {{ desc }}
       </p>
     </div>
     <a class="see"
