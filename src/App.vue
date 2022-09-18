@@ -1,7 +1,9 @@
 <template>
-  <header-nav />
-  <hero-page />
-  <features-section />
+  <div id="app">
+    <header-nav />
+    <hero-page />
+    <features-section />
+  </div>
 </template>
 
 <script>
