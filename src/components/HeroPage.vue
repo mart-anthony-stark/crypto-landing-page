@@ -1,31 +1,3 @@
-<template>
-  <main>
-    <div class="banner">
-      <h1>Start and Build Your Crypto Portfolio Here</h1>
-      <p>
-        Only at CryptoSmart, you can build a good portfolio and learn best
-        practices about cryptocurrency.
-      </p>
-      <button-comp text="Get Started" />
-    </div>
-
-    <div class="market">
-      <h3>Market Trend</h3>
-      <div class="coins-container">
-        <coin-card
-          v-for="coin in trends"
-          :key="coin.name"
-          :name="coin.name"
-          :slug="coin.slug"
-          :value="coin.value"
-          :rate="coin.rate"
-          :img="coin.img"
-        />
-      </div>
-    </div>
-  </main>
-</template>
-
 <script>
 import ButtonComp from "./ButtonComp.vue";
 import CoinCard from "./CoinCard.vue";
@@ -69,6 +41,34 @@ export default {
   },
 };
 </script>
+
+<template>
+  <main>
+    <div class="banner">
+      <h1>Start and Build Your Crypto Portfolio Here</h1>
+      <p>
+        Only at CryptoSmart, you can build a good portfolio and learn best
+        practices about cryptocurrency.
+      </p>
+      <button-comp text="Get Started" />
+    </div>
+
+    <div class="market">
+      <h3>Market Trend</h3>
+      <div class="coins-container">
+        <coin-card
+          v-for="coin in trends"
+          :key="coin.name"
+          :name="coin.name"
+          :slug="coin.slug"
+          :value="coin.value"
+          :rate="coin.rate"
+          :img="coin.img"
+        />
+      </div>
+    </div>
+  </main>
+</template>
 
 <style scoped>
 @import "../css/variables.css";
