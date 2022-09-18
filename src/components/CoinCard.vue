@@ -36,8 +36,8 @@ const props = defineProps({
 
 <style scoped>
 .cont {
-  width: 297px;
-  height: 187px;
+  width: 250px;
+  height: 160px;
 
   /* High Fidelity Color/Card Background */
 
