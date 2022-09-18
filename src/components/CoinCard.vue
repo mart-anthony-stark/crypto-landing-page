@@ -1,3 +1,15 @@
+<script setup>
+import { defineProps } from "vue";
+
+const props = defineProps({
+  name: String,
+  slug: String,
+  img: String,
+  value: String,
+  rate: String,
+});
+</script>
+
 <template>
   <div class="cont">
     <div class="head">
@@ -21,18 +33,6 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import { defineProps } from "vue";
-
-const props = defineProps({
-  name: String,
-  slug: String,
-  img: String,
-  value: String,
-  rate: String,
-});
-</script>
 
 <style scoped>
 .cont {
