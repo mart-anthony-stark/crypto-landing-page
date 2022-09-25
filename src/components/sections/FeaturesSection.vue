@@ -67,6 +67,7 @@ export default defineComponent({
 
 <style scoped>
 section {
+  font-family: 'Roboto', 'Helvetica Neue';
   background: rgb(50, 1, 40);
   background: radial-gradient(
     circle,
