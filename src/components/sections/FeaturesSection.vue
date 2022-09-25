@@ -86,11 +86,18 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 2rem;
-  margin:  1rem;
+  padding: 8rem 4rem;
 }
 .explore .left{
   max-width: 800px;
   line-height: 1.5rem;
+}
+@media (max-width: 1329px){
+  .features{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    gap: 1rem;
+  }
 }
 </style>
