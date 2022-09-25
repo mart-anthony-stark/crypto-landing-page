@@ -1,6 +1,7 @@
 <script>
 import { defineComponent } from "vue";
 import FeatureCard from "../FeatureCard.vue";
+import ButtonComp from "../ButtonComp.vue";
 
 export default defineComponent({
   setup() {
@@ -31,7 +32,8 @@ export default defineComponent({
   },
   components: {
     FeatureCard,
-  },
+    ButtonComp
+},
 });
 </script>
 
@@ -53,6 +55,13 @@ export default defineComponent({
         :icon="feature.icon"
       />
     </div>
+    <div class="explore">
+      <div class="left">
+        <h3>New In Cryptocurrency?</h3>
+        <p>We'll tell you what cryptocurrencies are, how they work and why you should own one right now. So let's do it.</p>
+      </div>
+      <ButtonComp text="Learn & Explore Now" glow />
+    </div>
   </section>
 </template>
 
@@ -72,5 +81,16 @@ section {
 .header {
   text-align: center;
   padding: 3rem 0;
+}
+.explore{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
+  margin:  1rem;
+}
+.explore .left{
+  max-width: 800px;
+  line-height: 1.5rem;
 }
 </style>
