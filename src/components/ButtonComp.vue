@@ -3,11 +3,12 @@ import { defineProps } from "vue";
 
 const props = defineProps({
   text: String,
+  glow: Boolean
 });
 </script>
 
 <template>
-  <button>{{ props.text }}</button>
+  <button :class="{glow: props.glow}">{{ props.text }}</button>
 </template>
 
 
@@ -21,5 +22,9 @@ button {
   border-radius: 5px;
   color: aliceblue;
   cursor: pointer;
+}
+.glow{
+  box-shadow: 0 0 25px var(--c-accent);
+
 }
 </style>
