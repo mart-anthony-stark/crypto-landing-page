@@ -12,7 +12,7 @@ export default defineComponent({
 </script>
 
 
-<template>
+<template lang="js">
   <div class="card">
     <img class="icon" :src="icon" alt="feature" />
     <div class="content">
@@ -22,7 +22,7 @@ export default defineComponent({
       </p>
     </div>
     <a class="see"
-      >See Explained <img src="../assets/svg/features/arrow.svg" alt="see more"
+      >See Explained <img src="../../public/img/features/arrow.svg" alt="see more"
     /></a>
   </div>
 </template>
